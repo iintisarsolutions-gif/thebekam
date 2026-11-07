@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4d77b">
+  <meta name="description" content="The Bekam menyediakan pilihan rawatan urutan lelaki dan bekam dengan suasana selesa, penerangan yang jelas serta tempahan mudah. Lihat pakej dan hubungi kami.">
+  <meta name="keywords" content="The Bekam, bekam lelaki, urut lelaki, urutan tradisional lelaki, bekam sunnah, pakej bekam, urut badan">
+  <meta name="author" content="The Bekam">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.thebekam.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ms_MY">
+  <meta property="og:site_name" content="The Bekam">
+  <meta property="og:title" content="The Bekam | Ruang Lega Untuk Diri Anda">
+  <meta property="og:description" content="Terokai pilihan rawatan urutan lelaki dan bekam. Pilih pakej yang sesuai dan buat tempahan dengan mudah.">
+  <meta property="og:url" content="https://www.thebekam.com/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=85">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Bekam | Ruang Lega Untuk Diri Anda">
+  <meta name="twitter:description" content="Pilihan rawatan urutan lelaki dan bekam. Semak pakej dan tempah sesi anda.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=85">
+  <title>The Bekam | Urutan & Bekam Lelaki</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Kod font anda -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- TAMBAH KOD INI UNTUK IKON MEDIA SOSIAL -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "The Bekam",
+    "description": "Perkhidmatan urutan lelaki dan bekam dengan tempahan sesi secara terus.",
+    "url": "https://www.thebekam.com/",
+    "image": "urutbekam.png",
+    "priceRange": "RM",
+    "telephone": "+60123456789",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Alamat perniagaan anda",
+      "addressLocality": "Bandar",
+      "addressRegion": "Negeri",
+      "postalCode": "00000",
+      "addressCountry": "MY"
+    },
+    "openingHours": "Mo-Su 10:00-21:00"
+  }
+  </script>
+
+  <style>
+    :root {
+      --ink: #24231e;
+      --muted: #77736a;
+      --cream: #fffdf7;
+      --paper: #f8f4e8;
+      --yellow: #f1d477;
+      --yellow-deep: #d9b84f;
+      --gold: #b18b32;
+      --line: rgba(48, 43, 29, .12);
+      --dark: #24241f;
+      --white: #fff;
+      --radius: 22px;
+      --shadow: 0 18px 55px rgba(48, 42, 25, .10);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { font-family: "DM Sans", sans-serif; color: var(--ink); background: var(--cream); line-height: 1.65; }
+    body.modal-open { overflow: hidden; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    .container { width: min(1160px, calc(100% - 44px)); margin-inline: auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: #8d702b; font-size: .72rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 27px; height: 1px; background: currentColor; }
+    .section { padding: 100px 0; }
+    .section-head { max-width: 650px; margin-bottom: 42px; }
+    .section-head h2 { font: 600 clamp(2.1rem, 4vw, 3.45rem)/1.12 "Playfair Display", serif; letter-spacing: -.035em; margin: 15px 0; }
+    .section-head p { color: var(--muted); max-width: 560px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 0; border-radius: 999px; padding: 14px 23px; font-weight: 800; font-size: .9rem; transition: .25s ease; }
+    .btn:hover { transform: translateY(-3px); }
+    .btn-dark { color: var(--white); background: var(--dark); box-shadow: 0 9px 22px rgba(0,0,0,.13); }
+    .btn-yellow { color: #27251d; background: var(--yellow); }
+    .btn-outline { border: 1px solid rgba(255,255,255,.55); color: white; background: transparent; }
+    .btn-block { width: 100%; }
+
+    /* Navigation */
+    .topbar { background: var(--dark); color: #e9e3d2; font-size: .74rem; padding: 8px 0; }
+    .topbar-inner { display: flex; justify-content: space-between; gap: 20px; }
+    .navbar { position: sticky; top: 0; z-index: 50; background: rgba(255,253,247,.94); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+    .nav-inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: .04em; }
+    .brand-mark { width: 40px; height: 40px; border-radius: 50%; background: var(--yellow); display: grid; place-items: center; color: #4d411f; font: 700 1.1rem "Playfair Display", serif; border: 1px solid rgba(128,99,27,.25); }
+    .brand small { display: block; color: #8c8062; font-size: .58rem; letter-spacing: .2em; margin-top: -3px; }
+    .nav-links { display: flex; align-items: center; gap: 27px; font-size: .83rem; font-weight: 700; color: #5e5a50; }
+    .nav-links a:hover { color: #9a7625; }
+    .nav-cta { padding: 11px 18px; font-size: .8rem; }
+    .menu-toggle { display: none; border: 0; background: transparent; font-size: 1.5rem; }
+
+    /* Hero */
+    .hero { min-height: 690px; position: relative; isolation: isolate; display: flex; align-items: center; color: white; overflow: hidden; background: #28271f; }
+    .hero::before { content: ""; position: absolute; inset: 0; z-index: -2; background: url("urutbekam.png") center 48%/cover no-repeat; transform: scale(1.02); }
+    .hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(25,25,21,.91) 0%, rgba(25,25,21,.76) 43%, rgba(25,25,21,.22) 100%), linear-gradient(0deg, rgba(20,20,17,.35), transparent 50%); }
+    .hero-content { padding: 105px 0 115px; max-width: 720px; }
+    .hero .eyebrow { color: var(--yellow); }
+    .hero h1 { font: 600 clamp(3.1rem, 7vw, 5.8rem)/.99 "Playfair Display", serif; letter-spacing: -.045em; margin: 22px 0; }
+    .hero h1 span { color: var(--yellow); font-style: italic; }
+    .hero p { color: rgba(255,255,255,.79); font-size: 1.04rem; max-width: 540px; margin-bottom: 30px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-note { display: flex; align-items: center; gap: 12px; margin-top: 48px; color: rgba(255,255,255,.72); font-size: .78rem; }
+    .hero-note span { width: 34px; height: 1px; background: var(--yellow); }
+    .hero-stamp { position: absolute; right: max(5vw, calc((100vw - 1160px)/2)); bottom: 55px; width: 135px; height: 135px; border: 1px solid rgba(255,255,255,.55); border-radius: 50%; display: grid; place-items: center; text-align: center; color: var(--yellow); font-size: .68rem; letter-spacing: .14em; line-height: 1.5; transform: rotate(10deg); }
+    .hero-stamp strong { display: block; font: 600 1.8rem "Playfair Display", serif; letter-spacing: 0; }
+
+    /* Trust strip */
+    .trust-strip { background: var(--yellow); padding: 19px 0; }
+    .trust-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+    .trust-item { display: flex; align-items: center; justify-content: center; gap: 11px; font-size: .8rem; font-weight: 800; color: #4c4227; }
+    .trust-icon { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; border: 1px solid rgba(65,54,24,.28); font-size: 1rem; }
+
+    /* Intro */
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .intro-visual { position: relative; min-height: 500px; }
+    .intro-photo { position: absolute; inset: 0 48px 35px 0; border-radius: 180px 180px 20px 20px; overflow: hidden; background: #ddd; }
+    .intro-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .photo-note { position: absolute; right: 0; bottom: 0; width: 205px; padding: 23px; background: var(--yellow); border-radius: 18px; box-shadow: var(--shadow); }
+    .photo-note strong { display: block; font: 600 1.8rem "Playfair Display",serif; }
+    .photo-note span { font-size: .76rem; color: #62552e; }
+    .intro-copy h2 { font: 600 clamp(2.2rem,4vw,3.4rem)/1.1 "Playfair Display",serif; margin: 15px 0 20px; }
+    .intro-copy p { color: var(--muted); margin-bottom: 16px; }
+    .check-list { list-style: none; display: grid; gap: 12px; margin: 25px 0 30px; }
+    .check-list li { display: flex; gap: 12px; align-items: flex-start; font-size: .9rem; font-weight: 700; }
+    .check-list li::before { content: "✓"; flex: 0 0 23px; width: 23px; height: 23px; display: grid; place-items: center; border-radius: 50%; background: #f5e9bd; color: #84651c; font-size: .75rem; }
+
+    /* Services */
+    .services-section { background: var(--paper); }
+    .service-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .service-card { background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius); padding: 29px; transition: .3s; }
+    .service-card:hover { transform: translateY(-7px); box-shadow: var(--shadow); }
+    .service-icon { width: 54px; height: 54px; border-radius: 17px; display: grid; place-items: center; background: #f5e9bd; font-size: 1.45rem; margin-bottom: 22px; }
+    .service-card h3 { font: 600 1.4rem "Playfair Display",serif; margin-bottom: 9px; }
+    .service-card p { color: var(--muted); font-size: .88rem; min-height: 70px; }
+    .service-tag { display: inline-block; margin-top: 19px; color: #8a6b22; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+
+    /* Packages */
+    .packages-section { background: #fffdf7; }
+    .package-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; align-items: stretch; }
+    .package-card { position: relative; padding: 31px 28px; border: 1px solid var(--line); border-radius: 23px; background: white; display: flex; flex-direction: column; }
+    .package-card.featured { background: var(--dark); color: white; border-color: var(--dark); transform: translateY(-10px); box-shadow: 0 22px 55px rgba(25,24,19,.18); }
+    .popular { position: absolute; top: 18px; right: 18px; background: var(--yellow); color: #39311b; border-radius: 999px; padding: 6px 10px; font-size: .62rem; font-weight: 900; letter-spacing: .08em; }
+    .package-type { color: #98772d; font-size: .7rem; letter-spacing: .16em; font-weight: 900; text-transform: uppercase; }
+    .featured .package-type { color: var(--yellow); }
+    .package-card h3 { font: 600 1.55rem "Playfair Display",serif; margin: 10px 0 5px; }
+    .package-desc { min-height: 48px; color: var(--muted); font-size: .82rem; }
+    .featured .package-desc { color: rgba(255,255,255,.65); }
+    .price { font: 700 2.55rem "Playfair Display",serif; margin: 19px 0 3px; letter-spacing: -.04em; }
+    .price small { font: 500 .78rem "DM Sans",sans-serif; letter-spacing: 0; color: var(--muted); }
+    .featured .price small { color: rgba(255,255,255,.6); }
+    .package-line { height: 1px; background: var(--line); margin: 18px 0; }
+    .featured .package-line { background: rgba(255,255,255,.15); }
+    .package-list { list-style: none; display: grid; gap: 11px; margin: 0 0 27px; flex: 1; }
+    .package-list li { display: flex; gap: 9px; font-size: .83rem; color: #68645b; }
+    .package-list li::before { content: "✓"; color: #9b7929; font-weight: 900; }
+    .featured .package-list li { color: rgba(255,255,255,.82); }
+    .featured .btn-yellow { background: var(--yellow); }
+    .package-footnote { text-align: center; color: var(--muted); font-size: .76rem; margin-top: 28px; }
+
+    /* Process */
+    .process-section { background: #f4e8c3; }
+    .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; counter-reset: step; }
+    .process-card { padding: 25px 22px; border-top: 1px solid rgba(73,60,25,.28); counter-increment: step; }
+    .process-card::before { content: "0" counter(step); display: block; font: 600 2rem "Playfair Display",serif; color: #9a782b; margin-bottom: 22px; }
+    .process-card h3 { font-size: 1rem; margin-bottom: 8px; }
+    .process-card p { color: #746b55; font-size: .82rem; }
+
+    /* Gallery */
+    .gallery-grid { display: grid; grid-template-columns: 1.2fr .8fr .8fr; grid-template-rows: 210px 210px; gap: 14px; }
+    .gallery-item { overflow: hidden; border-radius: 17px; position: relative; background: #e9e2d2; }
+    .gallery-item:first-child { grid-row: span 2; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 35px 17px 15px; color: white; font-weight: 700; font-size: .83rem; background: linear-gradient(transparent,rgba(0,0,0,.62)); }
+
+    /* Booking */
+    .booking-section { background: var(--dark); color: white; }
+    .booking-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 70px; align-items: start; }
+    .booking-copy .eyebrow { color: var(--yellow); }
+    .booking-copy h2 { font: 600 clamp(2.4rem,4.5vw,3.8rem)/1.08 "Playfair Display",serif; margin: 17px 0; }
+    .booking-copy p { color: rgba(255,255,255,.68); margin-bottom: 25px; }
+    .contact-line { display: flex; gap: 13px; align-items: center; padding: 14px 0; border-top: 1px solid rgba(255,255,255,.13); color: rgba(255,255,255,.82); font-size: .86rem; }
+    .contact-line b { color: var(--yellow); font-size: 1.1rem; }
+    .booking-form { padding: 34px; border-radius: 23px; background: #fffdf7; color: var(--ink); }
+    .booking-form h3 { font: 600 1.7rem "Playfair Display",serif; margin-bottom: 5px; }
+    .form-sub { color: var(--muted); font-size: .82rem; margin-bottom: 24px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .field.full { grid-column: 1/-1; }
+    .field label { font-size: .76rem; font-weight: 800; color: #575247; }
+    .field input, .field select, .field textarea { width: 100%; border: 1px solid #e6e0d2; background: white; border-radius: 11px; padding: 13px 14px; outline: none; color: var(--ink); font-size: .87rem; transition: .2s; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: #c6a64b; box-shadow: 0 0 0 3px rgba(198,166,75,.13); }
+    .field textarea { min-height: 92px; resize: vertical; }
+    .form-consent { color: var(--muted); font-size: .7rem; margin: 4px 0 17px; }
+    .form-status { min-height: 20px; color: #53713e; font-size: .8rem; margin-top: 10px; }
+
+    /* FAQ + footer */
+    .faq-wrap { display: grid; grid-template-columns: .7fr 1.3fr; gap: 65px; }
+    .faq-wrap h2 { font: 600 clamp(2.2rem,4vw,3.2rem)/1.1 "Playfair Display",serif; margin-top: 14px; }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-question { width: 100%; padding: 19px 0; border: 0; background: transparent; display: flex; justify-content: space-between; gap: 20px; text-align: left; font-weight: 800; color: var(--ink); }
+    .faq-question span:last-child { color: #9b7929; font-size: 1.2rem; }
+    .faq-answer { display: none; color: var(--muted); font-size: .87rem; padding: 0 35px 19px 0; }
+    .faq-item.active .faq-answer { display: block; }
+    .footer { background: #191a17; color: white; padding: 55px 0 25px; }
+    .footer-main { display: flex; justify-content: space-between; gap: 40px; padding-bottom: 38px; }
+    .footer p { color: rgba(255,255,255,.57); max-width: 390px; font-size: .84rem; margin-top: 15px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 22px; color: rgba(255,255,255,.72); font-size: .8rem; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); padding-top: 20px; color: rgba(255,255,255,.45); font-size: .72rem; display: flex; justify-content: space-between; gap: 15px; }
+
+    /* Modal */
+    .modal { position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; padding: 20px; background: rgba(17,17,14,.72); backdrop-filter: blur(7px); }
+    .modal.show { display: flex; }
+    .modal-panel { width: min(590px,100%); max-height: 92vh; overflow-y: auto; background: var(--cream); border-radius: 23px; padding: 31px; position: relative; animation: pop .25s ease; }
+    @keyframes pop { from { opacity: 0; transform: translateY(15px) scale(.98); } to { opacity: 1; transform: none; } }
+    .modal-close { position: absolute; top: 15px; right: 17px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: #f0eadb; font-size: 1.2rem; }
+    .modal-panel h3 { font: 600 1.8rem "Playfair Display",serif; padding-right: 40px; }
+    .modal-panel > p { color: var(--muted); font-size: .82rem; margin: 5px 0 20px; }
+    .selected-package { background: #f4e8c3; padding: 12px 15px; border-radius: 12px; font-size: .82rem; font-weight: 800; margin-bottom: 18px; }
+    .wa-float { position: fixed; z-index: 60; right: 22px; bottom: 22px; width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; color: white; background: #218b58; box-shadow: 0 10px 28px rgba(0,0,0,.2); font-size: 1.5rem; transition: .2s; }
+    .wa-float:hover { transform: translateY(-4px) scale(1.04); }
+    .reveal { opacity: 0; transform: translateY(22px); transition: .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 900px) {
+      .nav-links { gap: 15px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .intro-grid, .booking-grid, .faq-wrap { grid-template-columns: 1fr; gap: 45px; }
+      .intro-visual { max-width: 580px; width: 100%; }
+      .package-grid { grid-template-columns: repeat(2,1fr); }
+      .package-card.featured { transform: none; }
+      .service-grid { grid-template-columns: repeat(2,1fr); }
+      .booking-copy { max-width: 620px; }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(100% - 32px, 1160px); }
+      .topbar-inner { justify-content: center; text-align: center; }
+      .topbar-inner span:last-child { display: none; }
+      .nav-inner { min-height: 68px; }
+      .menu-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; padding: 18px 22px 23px; background: var(--cream); border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 16px; }
+      .nav-links.open { display: flex; }
+      .nav-links a:not(.nav-cta) { display: block; }
+      .nav-cta { text-align: center; }
+      .hero { min-height: 660px; }
+      .hero::after { background: linear-gradient(90deg,rgba(25,25,21,.88),rgba(25,25,21,.55)),linear-gradient(0deg,rgba(20,20,17,.4),transparent); }
+      .hero-content { padding: 85px 0 110px; }
+      .hero h1 { font-size: clamp(3rem,15vw,4.5rem); }
+      .hero p { font-size: .94rem; }
+      .hero-stamp { width: 93px; height: 93px; right: 18px; bottom: 18px; font-size: .5rem; }
+      .hero-stamp strong { font-size: 1.25rem; }
+      .trust-grid { grid-template-columns: 1fr 1fr; gap: 14px 8px; }
+      .trust-item { justify-content: flex-start; font-size: .7rem; }
+      .section { padding: 72px 0; }
+      .intro-visual { min-height: 390px; }
+      .intro-photo { inset: 0 28px 30px 0; }
+      .photo-note { width: 165px; padding: 16px; }
+      .photo-note strong { font-size: 1.45rem; }
+      .service-grid, .package-grid { grid-template-columns: 1fr; }
+      .service-card p { min-height: 0; }
+      .process-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .process-card { padding: 19px 12px; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 210px 150px; }
+      .gallery-item:first-child { grid-row: auto; grid-column: 1/-1; }
+      .booking-form { padding: 23px 18px; }
+      .form-grid { grid-template-columns: 1fr; gap: 0; }
+      .field.full { grid-column: auto; }
+      .footer-main, .footer-bottom { flex-direction: column; }
+      .footer-links { gap: 14px; }
+      .modal-panel { padding: 25px 18px; }
+      .wa-float { right: 15px; bottom: 15px; width: 53px; height: 53px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    .brand-logo {
+      height: 40px; /* Pelaras saiz tinggi logo mengikut kesesuaian navbar anda */
+      width: auto;  /* Memastikan nisbah (aspect ratio) gambar kekal seimbang */
+      display: block;
+    }
+
+    /* Saiz logo di footer */
+    .footer-logo {
+      height: 35px;
+      width: auto;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    /* Susunan ikon media sosial */
+    .footer-socials {
+      margin-top: 15px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border-radius: 50%;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+
+    .footer-socials a:hover {
+      background-color: #00bcd4; /* Tukar warna mengikut tema warna laman web anda */
+    }
+
+    /* Susunan ikon media sosial */
+    .footer-socials {
+      margin-top: 15px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffffff !important; /* Paksa ikon jadi warna putih supaya nampak */
+      border-radius: 50%;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .footer-socials a i {
+      font-size: 16px; /* Pastikan saiz ikon ditetapkan */
+    }
+
+    .footer-socials a:hover {
+      background-color: #00bcd4; /* Warna apabila tetikus menyentuh ikon */
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>RAWATAN LELAKI · TEMPAHAN MENGIKUT SLOT</span>
+      <span>Isnin – Ahad · 10.00 pagi – 9.00 malam</span>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#utama" aria-label="The Bekam - halaman utama">
+        <img src="logo.png" alt="Logo The Bekam" class="brand-logo">
+        <span>THE BEKAM<small>RUANG LEGA UNTUK DIRI ANDA</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#rawatan">Rawatan</a>
+        <a href="#pakej">Pakej & Harga</a>
+        <a href="#soalan">Soalan Lazim</a>
+        <a class="btn btn-dark nav-cta" href="#tempahan">Tempah Sesi ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="utama">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">URUTAN & BEKAM KHAS LELAKI</span>
+          <h1>Ambil masa.<br><span>Legakan diri.</span></h1>
+          <p>Di sebalik rutin yang padat, tubuh juga perlukan perhatian. Pilih sesi urutan atau bekam yang sesuai dengan keperluan dan keselesaan anda.</p>
+          <div class="hero-actions">
+            <a class="btn btn-yellow" href="#pakej">Lihat Pakej Rawatan <span>↗</span></a>
+            <a class="btn btn-outline" href="#tempahan">Buat Pertanyaan</a>
+          </div>
+          <div class="hero-note"><span></span> Sesi secara temujanji · Penerangan sebelum rawatan</div>
+        </div>
+      </div>
+      <div class="hero-stamp"><div><strong>THE</strong> BEKAM<br>WELLNESS FOR MEN</div></div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item"><span class="trust-icon">✦</span> Pilihan rawatan lelaki</div>
+        <div class="trust-item"><span class="trust-icon">◷</span> Tempahan ikut slot</div>
+        <div class="trust-item"><span class="trust-icon">✓</span> Penerangan sebelum sesi</div>
+        <div class="trust-item"><span class="trust-icon">⌂</span> Ruang rawatan selesa</div>
+      </div>
+    </section>
+
+    <section class="section" id="tentang">
+      <div class="container intro-grid">
+        <div class="intro-visual reveal">
+          <div class="intro-photo">
+            <img src="urut.jpeg" alt="Suasana ruang rawatan urutan yang tenang dan selesa" loading="lazy">
+          </div>
+          <div class="photo-note"><strong>Masa untuk diri.</strong><span>Perlahankan langkah, beri perhatian kepada tubuh.</span></div>
+        </div>
+        <div class="intro-copy reveal">
+          <span class="eyebrow">KENALI THE BEKAM</span>
+          <h2>Bukan sekadar sesi rawatan. Ini masa untuk anda berehat.</h2>
+          <p>Kami percaya setiap orang ada rutin dan keperluan yang berbeza. Sebab itu, The Bekam menyediakan beberapa pilihan sesi urutan dan bekam supaya anda boleh berbincang dan memilih dengan lebih yakin.</p>
+          <p>Setiap tempahan dimulakan dengan perbualan ringkas tentang keselesaan, pilihan rawatan dan perkara yang perlu dimaklumkan sebelum sesi.</p>
+          <ul class="check-list">
+            <li>Pilihan urutan dan bekam mengikut pakej</li>
+            <li>Penerangan ringkas tentang proses sesi</li>
+            <li>Tempahan mudah melalui WhatsApp</li>
+          </ul>
+          <a href="#rawatan" class="btn btn-dark">Kenali Pilihan Rawatan ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="rawatan">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">PILIHAN RAWATAN</span>
+          <h2>Kenali sesi yang boleh anda pilih.</h2>
+          <p>Setiap sesi mempunyai fokus dan tempoh yang berbeza. Baca penerangan, kemudian pilih berdasarkan keselesaan dan kesesuaian diri.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">✧</div>
+            <h3>Urutan Tradisional</h3>
+            <p>Sesi urutan badan untuk membantu anda menikmati waktu rehat dan rasa lebih selesa selepas rutin harian.</p>
+            <span class="service-tag">Sesi relaksasi badan</span>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">◉</div>
+            <h3>Bekam Kering</h3>
+            <p>Kaedah bekam tanpa sayatan. Kawasan dan kesesuaian sesi akan diterangkan terlebih dahulu oleh pengamal.</p>
+            <span class="service-tag">Tanpa sayatan</span>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">◎</div>
+            <h3>Bekam Basah</h3>
+            <p>Rawatan bekam yang melibatkan prosedur khusus. Saringan kesesuaian dan amalan kebersihan amat penting.</p>
+            <span class="service-tag">Dengan saringan awal</span>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">⌁</div>
+            <h3>Urutan Fokus Bahu & Belakang</h3>
+            <p>Pilihan sesi yang memberi tumpuan pada bahagian bahu dan belakang mengikut tahap keselesaan pelanggan.</p>
+            <span class="service-tag">Fokus bahagian tertentu</span>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">✺</div>
+            <h3>Urutan Kaki</h3>
+            <p>Sesi urutan kaki untuk mereka yang mahu memperuntukkan masa berehat selepas banyak bergerak.</p>
+            <span class="service-tag">Sesi khusus kaki</span>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">✦</div>
+            <h3>Pakej Gabungan</h3>
+            <p>Gabungan pilihan urutan dan bekam dalam satu kunjungan, tertakluk kepada kesesuaian dan penilaian awal.</p>
+            <span class="service-tag">Dua pilihan dalam satu sesi</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section packages-section" id="pakej">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">PAKEJ & HARGA</span>
+          <h2>Pilih pakej yang sesuai dengan masa anda.</h2>
+          <p>Tak pasti nak pilih yang mana? Mulakan dengan pakej asas atau hubungi kami untuk bertanya tentang pilihan sesi.</p>
+        </div>
+        <div class="package-grid">
+          <article class="package-card reveal">
+            <span class="package-type">Pakej 01 · Urutan</span>
+            <h3>Legakan Ringkas</h3>
+            <p class="package-desc">Untuk anda yang mahu sesi urutan lebih singkat.</p>
+            <div class="price">RM60 <small>/ sesi</small></div>
+            <div class="package-line"></div>
+            <ul class="package-list">
+              <li>Urutan fokus bahu dan belakang</li>
+              <li>Tempoh anggaran 30 minit</li>
+              <li>Perbincangan ringkas sebelum sesi</li>
+              <li>Temujanji mengikut slot tersedia</li>
+            </ul>
+            <button class="btn btn-dark btn-block choose-package" data-package="Legakan Ringkas – RM60">Pilih Pakej Ini ↗</button>
+          </article>
+
+          <article class="package-card featured reveal">
+            <span class="popular">PILIHAN RAMAI</span>
+            <span class="package-type">Pakej 02 · Urutan</span>
+            <h3>Rehat Menyeluruh</h3>
+            <p class="package-desc">Sesi urutan badan untuk masa rehat yang lebih panjang.</p>
+            <div class="price">RM100 <small>/ sesi</small></div>
+            <div class="package-line"></div>
+            <ul class="package-list">
+              <li>Urutan badan mengikut kesesuaian</li>
+              <li>Tempoh anggaran 60 minit</li>
+              <li>Tekanan urutan dibincangkan dahulu</li>
+              <li>Temujanji mengikut slot tersedia</li>
+            </ul>
+            <button class="btn btn-yellow btn-block choose-package" data-package="Rehat Menyeluruh – RM100">Pilih Pakej Ini ↗</button>
+          </article>
+
+          <article class="package-card reveal">
+            <span class="package-type">Pakej 03 · Bekam</span>
+            <h3>Bekam Asas</h3>
+            <p class="package-desc">Sesi bekam selepas semakan kesesuaian pelanggan.</p>
+            <div class="price">RM70 <small>/ sesi</small></div>
+            <div class="package-line"></div>
+            <ul class="package-list">
+              <li>Perbincangan dan saringan awal</li>
+              <li>Bekam mengikut kesesuaian</li>
+              <li>Penerangan penjagaan selepas sesi</li>
+              <li>Peralatan dan prosedur bersih</li>
+            </ul>
+            <button class="btn btn-dark btn-block choose-package" data-package="Bekam Asas – RM70">Pilih Pakej Ini ↗</button>
+          </article>
+
+          <article class="package-card reveal">
+            <span class="package-type">Pakej 04 · Bekam</span>
+            <h3>Bekam Lengkap</h3>
+            <p class="package-desc">Pilihan sesi bekam dengan masa konsultasi yang lebih teratur.</p>
+            <div class="price">RM110 <small>/ sesi</small></div>
+            <div class="package-line"></div>
+            <ul class="package-list">
+              <li>Saringan dan perbincangan awal</li>
+              <li>Bekam mengikut penilaian pengamal</li>
+              <li>Penerangan proses dan penjagaan</li>
+              <li>Tempahan mengikut slot tersedia</li>
+            </ul>
+            <button class="btn btn-dark btn-block choose-package" data-package="Bekam Lengkap – RM110">Pilih Pakej Ini ↗</button>
+          </article>
+
+          <article class="package-card reveal">
+            <span class="package-type">Pakej 05 · Gabungan</span>
+            <h3>Segar & Lega</h3>
+            <p class="package-desc">Gabungan urutan fokus dan pilihan bekam.</p>
+            <div class="price">RM150 <small>/ sesi</small></div>
+            <div class="package-line"></div>
+            <ul class="package-list">
+              <li>Urutan fokus sehingga 30 minit</li>
+              <li>Bekam tertakluk kepada kesesuaian</li>
+              <li>Saringan sebelum rawatan</li>
+              <li>Susunan sesi ditentukan bersama</li>
+            </ul>
+            <button class="btn btn-dark btn-block choose-package" data-package="Segar & Lega – RM150">Pilih Pakej Ini ↗</button>
+          </article>
+
+          <article class="package-card reveal">
+            <span class="package-type">Pakej 06 · Gabungan</span>
+            <h3>Pengalaman Lengkap</h3>
+            <p class="package-desc">Pilihan gabungan untuk pelanggan yang mahukan sesi lebih menyeluruh.</p>
+            <div class="price">RM190 <small>/ sesi</small></div>
+            <div class="package-line"></div>
+            <ul class="package-list">
+              <li>Urutan badan sehingga 60 minit</li>
+              <li>Bekam tertakluk kepada saringan</li>
+              <li>Penerangan sebelum dan selepas sesi</li>
+              <li>Perlu pengesahan slot terlebih dahulu</li>
+            </ul>
+            <button class="btn btn-dark btn-block choose-package" data-package="Pengalaman Lengkap – RM190">Pilih Pakej Ini ↗</button>
+          </article>
+        </div>
+        <p class="package-footnote">Hubungi Kami Untuk Keterangan Lanjut.</p>
+      </div>
+    </section>
+
+    <section class="section process-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">MUDAH & TERATUR</span>
+          <h2>Dari pertanyaan hingga sesi rawatan.</h2>
+          <p>Anda tak perlu tertanya-tanya apa yang perlu dibuat. Ini langkah ringkas untuk mendapatkan slot.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process-card reveal"><h3>Pilih pakej</h3><p>Semak pilihan urutan atau bekam yang ditawarkan.</p></div>
+          <div class="process-card reveal"><h3>Hantar pertanyaan</h3><p>Isi borang dengan maklumat dan masa pilihan anda.</p></div>
+          <div class="process-card reveal"><h3>Pengesahan slot</h3><p>Kami hubungi anda untuk semak kesesuaian dan kekosongan.</p></div>
+          <div class="process-card reveal"><h3>Hadir ke sesi</h3><p>Datang pada masa yang dipersetujui selepas pengesahan.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">SUASANA THE BEKAM</span>
+          <h2>Ruang galeri.</h2>
+          <p>Gambaran suasana rawatan yang tenang.</p>
+        </div>
+        <div class="gallery-grid reveal">
+          <div class="gallery-item"><img src="gambar 1.jpeg" alt="Suasana ruang rawatan" loading="lazy"><div class="gallery-caption">Ruang rawatan yang menenangkan</div></div>
+          <div class="gallery-item"><img src="gambar 2.jpeg" alt="Persediaan ruang urutan" loading="lazy"><div class="gallery-caption">Persediaan sesi</div></div>
+          <div class="gallery-item"><img src="gambar 3.jpeg" alt="Persekitaran spa dan wellness" loading="lazy"><div class="gallery-caption">Masa untuk berehat</div></div>
+          <div class="gallery-item"><img src="gambar 4.jpg" alt="Suasana wellness yang selesa" loading="lazy"><div class="gallery-caption">Keselesaan pelanggan</div></div>
+          <div class="gallery-item"><img src="gambar 5.jpeg" alt="Ruang wellness yang kemas" loading="lazy"><div class="gallery-caption">Persekitaran yang kemas</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booking-section" id="tempahan">
+      <div class="container booking-grid">
+        <div class="booking-copy reveal">
+          <span class="eyebrow">TEMPAHAN & PERTANYAAN</span>
+          <h2>Anda pilih masa. Kami bantu semak slot.</h2>
+          <p>Isi maklumat ringkas di sebelah. Butiran tempahan akan disediakan untuk dihantar melalui WhatsApp supaya kami boleh bantu semak pilihan sesi anda.</p>
+          <div class="contact-line"><b>↗</b><span>WhatsApp: <strong>012-345 6789</strong></span></div>
+          <div class="contact-line"><b>◷</b><span>Waktu operasi: 10.00 pagi – 9.00 malam</span></div>
+          <div class="contact-line"><b>⌖</b><span>Alamat: Tanjung Dawai,Kedah</span></div>
+        </div>
+        <form class="booking-form reveal" id="mainForm">
+          <h3>Borang Tempahan</h3>
+          <p class="form-sub">Lengkapkan maklumat di bawah untuk pertanyaan sesi.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="mainName">Nama penuh *</label>
+              <input id="mainName" name="name" type="text" placeholder="Nama anda" required>
+            </div>
+            <div class="field">
+              <label for="mainPhone">Nombor telefon *</label>
+              <input id="mainPhone" name="phone" type="tel" placeholder="Contoh: 0123456789" required>
+            </div>
+            <div class="field">
+              <label for="mainPackage">Pilihan rawatan *</label>
+              <select id="mainPackage" name="package" required>
+                <option value="">Pilih rawatan</option>
+                <option>Urutan Tradisional</option>
+                <option>Bekam Kering</option>
+                <option>Bekam Basah</option>
+                <option>Urutan Bahu & Belakang</option>
+                <option>Urutan Kaki</option>
+                <option>Pakej Gabungan</option>
+                <option>Belum pasti / ingin bertanya</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="mainDate">Tarikh pilihan *</label>
+              <input id="mainDate" name="date" type="date" required>
+            </div>
+            <div class="field">
+              <label for="mainTime">Masa pilihan</label>
+              <select id="mainTime" name="time">
+                <option value="">Pilih masa</option>
+                <option>10.00 pagi – 12.00 tengah hari</option>
+                <option>12.00 tengah hari – 3.00 petang</option>
+                <option>3.00 petang – 6.00 petang</option>
+                <option>6.00 petang – 9.00 malam</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="mainVisit">Pernah mendapatkan rawatan?</label>
+              <select id="mainVisit" name="visit">
+                <option value="">Pilih jawapan</option>
+                <option>Ya, pernah</option>
+                <option>Belum pernah</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="mainNotes">Catatan / pertanyaan</label>
+              <textarea id="mainNotes" name="notes" placeholder="Nyatakan pertanyaan atau perkara yang ingin dimaklumkan (pilihan)"></textarea>
+            </div>
+          </div>
+          <p class="form-consent">Dengan menghantar borang, anda bersetuju untuk dihubungi bagi tujuan pertanyaan dan pengesahan tempahan. Tempahan hanya disahkan selepas pihak kami mengesahkan slot.</p>
+          <button class="btn btn-dark btn-block" type="submit">Hantar Melalui WhatsApp ↗</button>
+          <div class="form-status" id="mainStatus" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="soalan">
+      <div class="container faq-wrap">
+        <div class="reveal">
+          <span class="eyebrow">SOALAN LAZIM</span>
+          <h2>Perkara yang anda mungkin nak tahu.</h2>
+        </div>
+        <div class="reveal">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Perlu buat temujanji terlebih dahulu?</span><span>+</span></button>
+            <div class="faq-answer">Ya. Kami menggalakkan pelanggan membuat pertanyaan dan mendapatkan pengesahan slot terlebih dahulu supaya masa kunjungan dapat disusun.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Saya tak pasti pakej yang sesuai. Apa perlu saya buat?</span><span>+</span></button>
+            <div class="faq-answer">Pilih “Belum pasti / ingin bertanya” dalam borang. Terangkan pilihan atau pertanyaan anda dan pihak kami akan membantu menerangkan skop sesi yang ditawarkan.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Adakah semua orang sesuai untuk bekam?</span><span>+</span></button>
+            <div class="faq-answer">Tidak semestinya. Kesesuaian bergantung pada keadaan individu. Maklumkan sejarah kesihatan, ubat-ubatan dan keadaan berkaitan sebelum mempertimbangkan rawatan. Dapatkan nasihat doktor jika anda mempunyai masalah kesihatan atau tidak pasti sama ada rawatan sesuai.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Adakah bekam boleh merawat penyakit?</span><span>+</span></button>
+            <div class="faq-answer">The Bekam tidak menjanjikan bekam atau urutan sebagai rawatan penyembuh penyakit. Perkhidmatan ini bukan pengganti diagnosis, rawatan atau nasihat profesional kesihatan.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Bagaimana dengan kebersihan semasa bekam?</span><span>+</span></button>
+            <div class="faq-answer">Sebelum diterbitkan, nyatakan hanya amalan yang benar-benar dilaksanakan oleh premis. Untuk bekam basah, pastikan pengamal terlatih menggunakan peralatan steril pakai buang dan mengikut amalan kawalan jangkitan yang sesuai.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <!-- Logo Gambar -->
+          <a class="brand" href="#utama">
+            <img src="logo.png" alt="Logo The Bekam" class="footer-logo">
+            <span>THE BEKAM<small>RUANG LEGA UNTUK DIRI ANDA</small></span>
+          </a>
+          <p>Pilihan sesi urutan dan bekam lelaki. Hubungi kami untuk penerangan lanjut dan pengesahan slot tempahan.</p>
+          
+          <!-- Ikon Media Sosial -->
+          <div class="footer-socials">
+            <a href="https://facebook.com/namapageanda" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/namaprofilanda" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com/@namaprofilanda" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <a href="#tentang">Tentang</a><a href="#rawatan">Rawatan</a><a href="#pakej">Pakej</a><a href="#tempahan">Tempahan</a><a href="#soalan">FAQ</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> The Bekam. Hak cipta terpelihara.</span>
+        <span>Urutan dan bekam bukan pengganti rawatan perubatan profesional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" id="floatWhatsApp" href="#" aria-label="Hubungi The Bekam melalui WhatsApp">✆</a>
+
+  <!-- Popup borang pakej -->
+  <div class="modal" id="packageModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-panel">
+      <button class="modal-close" id="modalClose" aria-label="Tutup borang">×</button>
+      <h3 id="modalTitle">Tempah pilihan anda</h3>
+      <p>Isi maklumat di bawah. Kami akan bantu semak slot dan maklumkan langkah seterusnya.</p>
+      <div class="selected-package" id="selectedPackage">Pakej pilihan: —</div>
+      <form id="popupForm">
+        <div class="form-grid">
+          <div class="field">
+            <label for="popName">Nama penuh *</label>
+            <input id="popName" name="name" type="text" placeholder="Nama anda" required>
+          </div>
+          <div class="field">
+            <label for="popPhone">Nombor telefon *</label>
+            <input id="popPhone" name="phone" type="tel" placeholder="Contoh: 0123456789" required>
+          </div>
+          <div class="field">
+            <label for="popDate">Tarikh pilihan *</label>
+            <input id="popDate" name="date" type="date" required>
+          </div>
+          <div class="field">
+            <label for="popTime">Masa pilihan</label>
+            <select id="popTime" name="time">
+              <option value="">Pilih masa</option>
+              <option>10.00 pagi – 12.00 tengah hari</option>
+              <option>12.00 tengah hari – 3.00 petang</option>
+              <option>3.00 petang – 6.00 petang</option>
+              <option>6.00 petang – 9.00 malam</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="popNotes">Catatan / perkara yang ingin dimaklumkan</label>
+            <textarea id="popNotes" name="notes" placeholder="Contoh: Pertanyaan tentang sesi atau kesesuaian rawatan"></textarea>
+          </div>
+        </div>
+        <p class="form-consent">Maklumat ini digunakan untuk mengurus pertanyaan dan pengesahan tempahan sahaja.</p>
+        <button class="btn btn-dark btn-block" type="submit">Teruskan ke WhatsApp ↗</button>
+        <div class="form-status" id="popupStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // GANTIKAN nombor ini dengan nombor WhatsApp rasmi, format kod negara tanpa + atau sengkang.
+    const WHATSAPP_NUMBER = "60123456789";
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+    navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.textContent = "☰";
+    }));
+
+    // Tetapkan tarikh minimum kepada hari ini.
+    const today = new Date();
+    const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().split("T")[0];
+    ["mainDate", "popDate"].forEach(id => document.getElementById(id).min = localToday);
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function openWhatsApp(message) {
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    // Borang utama.
+    document.getElementById("mainForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      if (!this.reportValidity()) return;
+      const data = new FormData(this);
+      const message = [
+        "Assalamualaikum The Bekam, saya ingin membuat pertanyaan tempahan.",
+        "",
+        `Nama: ${data.get("name")}`,
+        `No. telefon: ${data.get("phone")}`,
+        `Pilihan rawatan: ${data.get("package")}`,
+        `Tarikh pilihan: ${data.get("date")}`,
+        `Masa pilihan: ${data.get("time") || "Fleksibel"}`,
+        `Pernah mendapatkan rawatan: ${data.get("visit") || "Tidak dinyatakan"}`,
+        `Catatan: ${data.get("notes") || "Tiada"}`
+      ].join("\n");
+      document.getElementById("mainStatus").textContent = "Membuka WhatsApp untuk menghantar pertanyaan anda…";
+      openWhatsApp(message);
+    });
+
+    // Popup pakej.
+    const modal = document.getElementById("packageModal");
+    const selectedPackage = document.getElementById("selectedPackage");
+    let chosenPackage = "";
+    function showModal(packageName) {
+      chosenPackage = packageName;
+      selectedPackage.textContent = "Pakej pilihan: " + packageName;
+      modal.classList.add("show");
+      document.body.classList.add("modal-open");
+      document.getElementById("popName").focus();
+    }
+    function hideModal() {
+      modal.classList.remove("show");
+      document.body.classList.remove("modal-open");
+    }
+    document.querySelectorAll(".choose-package").forEach(button => {
+      button.addEventListener("click", () => showModal(button.dataset.package));
+    });
+    document.getElementById("modalClose").addEventListener("click", hideModal);
+    modal.addEventListener("click", event => { if (event.target === modal) hideModal(); });
+    document.addEventListener("keydown", event => { if (event.key === "Escape" && modal.classList.contains("show")) hideModal(); });
+
+    document.getElementById("popupForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      if (!this.reportValidity()) return;
+      const data = new FormData(this);
+      const message = [
+        "Assalamualaikum The Bekam, saya berminat dengan pakej berikut.",
+        "",
+        `Pakej: ${chosenPackage}`,
+        `Nama: ${data.get("name")}`,
+        `No. telefon: ${data.get("phone")}`,
+        `Tarikh pilihan: ${data.get("date")}`,
+        `Masa pilihan: ${data.get("time") || "Fleksibel"}`,
+        `Catatan: ${data.get("notes") || "Tiada"}`
+      ].join("\n");
+      document.getElementById("popupStatus").textContent = "Membuka WhatsApp untuk menghantar maklumat anda…";
+      openWhatsApp(message);
+    });
+
+    // FAQ accordion.
+    document.querySelectorAll(".faq-question").forEach(button => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".faq-item");
+        const isActive = item.classList.toggle("active");
+        button.setAttribute("aria-expanded", String(isActive));
+        button.querySelector("span:last-child").textContent = isActive ? "−" : "+";
+      });
+    });
+
+    // Floating WhatsApp.
+    document.getElementById("floatWhatsApp").addEventListener("click", event => {
+      event.preventDefault();
+      openWhatsApp("Assalamualaikum The Bekam, saya ingin bertanya tentang pakej urutan dan bekam.");
+    });
+
+    // Reveal animation with graceful fallback.
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(element => revealObserver.observe(element));
+  </script>
+</body>
+</html>
